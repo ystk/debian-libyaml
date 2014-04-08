@@ -1,3 +1,12 @@
+libyaml (0.1.3-1+deb6u4) squeeze-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * CVE-2014-2525: Heap overflow when parsing YAML tags.
+    The heap overflow is caused by not properly expanding a string before
+    writing to it in function yaml_parser_scan_uri_escapes in scanner.c.
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 20 Mar 2014 00:04:03 +0100
+
 libyaml (0.1.3-1+deb6u3) squeeze-security; urgency=high
 
   * Non-maintainer upload by the Security Team.
