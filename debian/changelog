@@ -1,3 +1,56 @@
+libyaml (0.1.6-2) unstable; urgency=medium
+
+  * Move doxygen from Build-Depends to Build-Depends-Indep.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Tue, 19 Aug 2014 21:56:25 -0400
+
+libyaml (0.1.6-1) unstable; urgency=medium
+
+  * New upstream version 0.1.6.
+    + Fix CVE-2013-6393: heap-based buffer overflow when parsing YAML
+      tags.
+    + Fix CVE-2014-2525: heap-based buffer overflow in
+      yaml_parser_scan_uri_escapes.
+  * Drop upstreamed patches.
+  * Run tests at build time.
+  * Bump Standards-Version to 3.9.5 (no changes needed).
+  * Use dh-autoreconf.  (Closes: #745078)
+  * Use dh-buildinfo.
+  * Add libyaml-doc package for Doxygen-generated API documentation and
+    examples.  (Closes: #696821)
+  * Acknowledge NMUs.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Tue, 19 Aug 2014 00:03:53 -0400
+
+libyaml (0.1.4-3.2) unstable; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Add CVE-2014-2525.patch patch.
+    CVE-2014-2525: Fixes heap overflow in yaml_parser_scan_uri_escapes.
+    The heap overflow is caused by not properly expanding a string before
+    writing to it in function yaml_parser_scan_uri_escapes in scanner.c.
+    (Closes: #742732)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 27 Mar 2014 06:22:25 +0100
+
+libyaml (0.1.4-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Drop libyaml-indent-column-overflow-v2.patch patch.
+    This patch causes additional regressions on simple YAML files.
+  * Add libyaml-guard-against-overflows-in-indent-and-flow_level.patch patch.
+    Add upstream's patch to guard against overflows in indent and
+    flow_level. (Closes: #738587)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 13 Feb 2014 07:51:58 +0100
+
+libyaml (0.1.4-3) unstable; urgency=high
+
+  * Fix CVE-2013-6393: heap-based buffer overflow when parsing YAML tags.
+    (Closes: #737076)
+
+ -- Anders Kaseorg <andersk@mit.edu>  Wed, 29 Jan 2014 20:11:48 -0500
+
 libyaml (0.1.4-2) unstable; urgency=low
 
   * Remove extra libyaml-0.so symlink from libyaml-dev.

@@ -3,7 +3,8 @@ Section: libs
 Priority: optional
 Maintainer: Anders Kaseorg <andersk@mit.edu>
 Build-Depends: @cdbs@
-Standards-Version: 3.9.2
+Build-Depends-Indep: doxygen
+Standards-Version: 3.9.5
 Homepage: http://pyyaml.org/wiki/LibYAML
 Vcs-Git: git://andersk.mit.edu/libyaml.git
 Vcs-Browser: http://andersk.mit.edu/gitweb/libyaml.git
@@ -35,8 +36,20 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends: ${misc:Depends}, libyaml-0-2 (= ${binary:Version})
+Suggests: libyaml-doc
 Description: Fast YAML 1.1 parser and emitter library (development)
  LibYAML is a C library for parsing and emitting data in YAML 1.1, a
  human-readable data serialization format.
  .
  This package contains development headers and static libraries.
+
+Package: libyaml-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: Fast YAML 1.1 parser and emitter library (documentation)
+ LibYAML is a C library for parsing and emitting data in YAML 1.1, a
+ human-readable data serialization format.
+ .
+ This package contains API documentation for developers in HTML
+ format, and some example programs from the LibYAML distribution.
