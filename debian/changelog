@@ -1,3 +1,12 @@
+libyaml (0.1.3-1+deb6u5) squeeze-lts; urgency=high
+
+  * Non-maintainer upload by the Squeeze LTS Team.
+  * Add CVE-2014-9130.patch.
+    CVE-2014-9130: assert failure when processing wrapped strings.
+    (Closes: #771366)
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 14 Dec 2014 13:35:17 +0100
+
 libyaml (0.1.3-1+deb6u4) squeeze-security; urgency=high
 
   * Non-maintainer upload by the Security Team.
