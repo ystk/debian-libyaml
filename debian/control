@@ -8,7 +8,7 @@ Build-Depends: cdbs (>= 0.4.93~),
  dh-buildinfo (>= 0.9+nmu1~),
  dh-autoreconf
 Build-Depends-Indep: doxygen
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://pyyaml.org/wiki/LibYAML
 Vcs-Git: git://andersk.mit.edu/libyaml.git
 Vcs-Browser: http://andersk.mit.edu/gitweb/libyaml.git

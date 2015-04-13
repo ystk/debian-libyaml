@@ -1,3 +1,11 @@
+libyaml (0.1.6-3) unstable; urgency=high
+
+  * debian/patches/CVE-2014-9130.patch: Fix CVE-2014-9130 assertion
+    failure caused by wrapped strings.  (Closes: #771366)
+  * Bump Standards-Version to 3.9.6 (no changes needed).
+
+ -- Anders Kaseorg <andersk@mit.edu>  Fri, 28 Nov 2014 22:05:10 -0500
+
 libyaml (0.1.6-2) unstable; urgency=medium
 
   * Move doxygen from Build-Depends to Build-Depends-Indep.
