@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with autoreconf
+
+override_dh_auto_build-indep:
+	$(MAKE) html
+
+override_dh_installdocs-indep:
+	dh_installdocs -i
+	dh_doxygen -plibyaml-doc
+
+override_dh_strip:
+	dh_strip -plibyaml-0-2 --dbgsym-migration='libyaml-0-2-dbg (<< 0.1.7-1~)'
+	dh_strip --remaining
